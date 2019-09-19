@@ -69,12 +69,13 @@ touch pom.xml
 </project>
 ```
 ### Simple project demo
+- Clear appliation structrue
 ```sh
 cd ${YOUR_WORK_DIR}/bigdata/scala
 mkdir -p src/main.scala/ca/jrvs
 scr/main/scala/ca/jrvs/App.scala
 ```
-- simple "Hello World!" application
+- Simple "Hello World!" application
 ```scala
 package ca.jrvs
 object App {
@@ -85,3 +86,4 @@ object App {
 	}
 }
 ```
+### Install IntelliJ Scala Plugin(IntelliJ will do it auto based on your <b>pom.xml</b> file).
