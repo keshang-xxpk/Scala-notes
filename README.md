@@ -182,7 +182,7 @@ You can fill in the first parameter and partially apply the second.
 val timesFour = multiply(4)_//timesFour: Int => Int = <function>
 timesFour(3)//res9: Int = 12
 ```
-- Variable length arguments
+- **Variable length arguments**
 There is a special syntax for methods that can take parameters of a repeated type. To apply String’s capitalize function to several strings, you might write:
 ```scala
 def capitalizeAll(args:String*) = {//capitalizeAll: (args: String*)Seq[String]
