@@ -103,4 +103,8 @@ We can use Scala console to run simple scala code by right click ->Run Scala Con
 	- https://docs.scala-lang.org/tour/unified-types.html
 - Tutorial video:
 	- https://docs.scala-lang.org/overviews/scaladoc/interface.html
-
+#### Simple Demo on worksheet
+- Expressions
+```scala
+1 + 1
+```
