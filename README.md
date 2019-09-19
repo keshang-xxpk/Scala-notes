@@ -113,21 +113,47 @@ res0 is an automatically created value name given by the interpreter to the resu
 ```scala
 val two = 1 + 1//two: Int = 2
 var name = "ke"//name: String = ke
+```
+If you need to change the binding, you can use a var instead.
+- Functions
+You can create functions with def.
+```scala
 def addOne(m: Int):Int = m + 1//addOne: (m: Int)Int
-val three = addOne(2)//three: Int = 3
+```
+In Scala, you need to specify the type signature for function parameters. The interpreter happily repeats the type signature back to you.
 
+```scala
+val three = addOne(2)//three: Int = 3
+```
+You can leave off parens on functions with no arguments.
+```scala
 def four() = 2 + 2//four: ()Int
 four()//res1: Int = 4
-
+```
+- Anonymous Functions
+You can create anonymous functions.
+```scala
 (x:Int)=>x + 1//res2: Int => Int = <function>
+```
+This function adds 1 to an Int named x.
+```scala
 res2(1)//res3: Int = 2
+```
+You can pass anonymous functions around or save them into vals.
+```scala
 val addTwo = (x:Int)=>x + 2//addTwo: Int => Int = <function>
-addTwo(2)//res4: Int = 4
 
+addTwo(2)//res4: Int = 4
+```
+If your function is made up of many expressions, you can use {} to give yourself some breathing room.
+```scala
 def timesTwo(i:Int): Int = {//timesTwo: (i: Int)Int
   println("hello World")//hello World
   i * 2
 }
+```
+This is also true of an anonymous function.
+```scala
 timesTwo(2)//res5: Int = 4
 
 val timesThree={//timesThree: Int => Int = <function>
@@ -135,6 +161,7 @@ val timesThree={//timesThree: Int => Int = <function>
     i * 3
 }//hello world
 timesThree(3)//res6: Int = 9
+```
 
 def adder(m:Int,n:Int) = m + n//adder: (m: Int, n: Int)Int
 val add2 = adder(2,_:Int)//add2: Int => Int = <function>
