@@ -86,4 +86,5 @@ object App {
 	}
 }
 ```
-### Install IntelliJ Scala Plugin(IntelliJ will do it auto based on your <b>pom.xml</b> file).
+### Install IntelliJ Scala Plugin
+### Import this project to IntelliJ
