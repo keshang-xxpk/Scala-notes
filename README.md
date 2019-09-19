@@ -108,3 +108,4 @@ Expressions
 ```scala
 1 + 1 //res0: Int = 2
 ```
+res0 is an automatically created value name given by the interpreter to the result of your expression. It has the type Int and contains the Integer 2.(Almost) everything in Scala is an expression.
