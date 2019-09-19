@@ -7,7 +7,7 @@ cd ${YOUR_WORK_DIR}/bigdata/scala
 touch pom.xml
 ```
 ### Create pom.xml
-```css
+```html
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>ca.jrvs</groupId>
