@@ -68,3 +68,19 @@ touch pom.xml
   </build>
 </project>
 ```
+### Simple project demo
+```sh
+cd ${YOUR_WORK_DIR}/bigdata/scala
+mkdir -p src/main.scala/ca/jrvs
+scr/main/scala/ca/jrvs/App.scala
+```
+```scala
+package ca.jrvs
+object App {
+	def foo(x : Array[String])  = x.foldLeft("")((a,b)=>a + b)
+	def main(args:Array[String]) {
+		println("hello world!")
+		println("concat arguments = " + foo(args))
+	}
+}
+```
