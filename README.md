@@ -1,4 +1,7 @@
 # Scala-notes
+## 1.First Scala App
+## 2.IntelliJ Scala Worksheet
+## 3.Learing Scala
 ## First Scala App
 ### Using maven to manage project
 ```bash
