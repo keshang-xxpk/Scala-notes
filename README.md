@@ -94,6 +94,11 @@ We can use Scala console to run simple scala code by right click ->Run Scala Con
 ![](https://github.com/keshang-xxpk/Scala-notes/blob/master/Assest/Screen%20Shot%202019-09-19%20at%201.31.34%20PM.png)
 ## Learing Scala
 ### Basics:
+#### Useful tutorial I use:
 - video:https://www.codequizzes.com/scala/tutorial
 - twitter scala school:https://twitter.github.io/scala_school
+#### Here has more resources may help you:
+- Offical tuorial:
+	- https://docs.scala-lang.org/tour/basics.html
+	- https://docs.scala-lang.org/tour/unified-types.html
 
