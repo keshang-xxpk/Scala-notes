@@ -104,18 +104,18 @@ We can use Scala console to run simple scala code by right click ->Run Scala Con
 - Tutorial video:
 	- https://docs.scala-lang.org/overviews/scaladoc/interface.html
 #### Simple Demo on worksheet
-- Expressions
+- **Expressions**
 ```scala
 1 + 1 //res0: Int = 2
 ```
 res0 is an automatically created value name given by the interpreter to the result of your expression. It has the type Int and contains the Integer 2.(Almost) everything in Scala is an expression.
-- Values
+- **Values**
 ```scala
 val two = 1 + 1//two: Int = 2
 var name = "ke"//name: String = ke
 ```
 If you need to change the binding, you can use a var instead.
-- Functions
+- **Functions**
 You can create functions with def.
 ```scala
 def addOne(m: Int):Int = m + 1//addOne: (m: Int)Int
@@ -130,7 +130,7 @@ You can leave off parens on functions with no arguments.
 def four() = 2 + 2//four: ()Int
 four()//res1: Int = 4
 ```
-- Anonymous Functions
+- **Anonymous Functions**
 You can create anonymous functions.
 ```scala
 (x:Int)=>x + 1//res2: Int => Int = <function>
@@ -162,14 +162,14 @@ val timesThree={//timesThree: Int => Int = <function>
 }//hello world
 timesThree(3)//res6: Int = 9
 ```
-- Partial application
+- **Partial application**
 You can partially apply a function with an underscore, which gives you another function. Scala uses the underscore to mean different things in different contexts, but you can usually think of it as an unnamed magical wildcard. In the context of { _ + 2 } it means an unnamed parameter. You can use it like so:
 ```scala
 def adder(m:Int,n:Int) = m + n//adder: (m: Int, n: Int)Int
 val add2 = adder(2,_:Int)//add2: Int => Int = <function>
 add2(3)//res7: Int = 5
 ```
-- Curried functions
+- **Curried functions**
 Sometimes it makes sense to let people apply some arguments to your function now and others later.
 
 Here’s an example of a function that lets you build multipliers of two numbers together. At one call site, you’ll decide which is the multiplier and at a later call site, you’ll choose a multiplicand.
@@ -192,7 +192,7 @@ def capitalizeAll(args:String*) = {//capitalizeAll: (args: String*)Seq[String]
 }
 capitalizeAll("rarity","appledog")//res10: Seq[String] = ArraySeq(Rarity, Appledog)
 ```
-- Classes
+- **Classes**
 ```scala
 class Calculator {
   var brand: String = "HP"
@@ -205,7 +205,7 @@ calc.brand//res12: String = HP
 ```
 Contained are examples defining methods with def and fields with val. Methods are just functions that can access the state of the class.
 
-- Constructor
+- **Constructor**
 Constructors aren’t special methods, they are the code outside of method definitions in your class. Let’s extend our Calculator example to take a constructor argument and use it to initialize internal state.
 ```scala
 class Calculator2(brant:String) {
@@ -227,7 +227,7 @@ val calc2 = new Calculator2("TI")//calc2: Calculator2 = Calculator2@6d484872
 calc2.color//res13: String = blue
 calc2.add(1,2)//res14: Int = 3
 ```
-- Abstract Classes
+- **Abstract Classes**
 You can define an abstract class, a class that defines some methods but does not implement them. Instead, subclasses that extend the abstract class define these methods. You can’t create an instance of an abstract class.
 ```scala
 abstract class Shape {
@@ -240,7 +240,7 @@ class Circle(r:Int) extends Shape {
 
 val s = new Circle(2)//s: Circle = Circle@7d74ce21
 ```
-- Traits
+- **Traits**
 traits are collections of fields and behaviors that you can extend or mixin to your classes.
 ```scala
 trait Car {
@@ -261,7 +261,7 @@ class BMW2 extends Car with Shiny {
   val shineRefraction = 12
 }//defined class BMW2
 ```
-- Types
+- **Types**
 Earlier, you saw that we defined a function that took an Int which is a type of Number. Functions can also be generic and work on any type. When that occurs, you’ll see a type parameter introduced with the square bracket syntax. Here’s an example of a Cache of generic Keys and Values.
 
 ```scala
