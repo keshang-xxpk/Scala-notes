@@ -89,3 +89,5 @@ object App {
 ### Install IntelliJ Scala Plugin
 ### Import this project to IntelliJ(YEAH!We get there!)
 ![](https://github.com/keshang-xxpk/Scala-notes/blob/master/Assest/Screen%20Shot%202019-09-19%20at%201.21.50%20PM.png)
+## IntelliJ Scala Worksheet
+We can use Scala console to run simple scala code by right click ->Run Scala Console,the thing is if you quit the console you will lose the history,so alternatively we can create a Scala Worksheet.
