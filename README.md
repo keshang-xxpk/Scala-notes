@@ -87,5 +87,5 @@ object App {
 }
 ```
 ### Install IntelliJ Scala Plugin
-### Import this project to IntelliJ
+### Import this project to IntelliJ(YEAH!We get there!)
 ![](https://github.com/keshang-xxpk/Scala-notes/blob/master/Assest/Screen%20Shot%202019-09-19%20at%201.21.50%20PM.png)
