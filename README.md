@@ -101,4 +101,6 @@ We can use Scala console to run simple scala code by right click ->Run Scala Con
 - Offical tuorial:
 	- https://docs.scala-lang.org/tour/basics.html
 	- https://docs.scala-lang.org/tour/unified-types.html
+- Tutorial video:
+	- https://docs.scala-lang.org/overviews/scaladoc/interface.html
 
