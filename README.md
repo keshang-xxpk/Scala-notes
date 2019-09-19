@@ -162,23 +162,38 @@ val timesThree={//timesThree: Int => Int = <function>
 }//hello world
 timesThree(3)//res6: Int = 9
 ```
-
+- Partial application
+You can partially apply a function with an underscore, which gives you another function. Scala uses the underscore to mean different things in different contexts, but you can usually think of it as an unnamed magical wildcard. In the context of { _ + 2 } it means an unnamed parameter. You can use it like so:
+```scala
 def adder(m:Int,n:Int) = m + n//adder: (m: Int, n: Int)Int
 val add2 = adder(2,_:Int)//add2: Int => Int = <function>
 add2(3)//res7: Int = 5
+```
+- Curried functions
+Sometimes it makes sense to let people apply some arguments to your function now and others later.
 
+Here’s an example of a function that lets you build multipliers of two numbers together. At one call site, you’ll decide which is the multiplier and at a later call site, you’ll choose a multiplicand.
+```scala
 def multiply(m:Int)(n:Int):Int = m * n//multiply: (m: Int)(n: Int)Int
 multiply(2)(3)//res8: Int = 6
+```
+You can fill in the first parameter and partially apply the second.
+```scala
 val timesFour = multiply(4)_//timesFour: Int => Int = <function>
 timesFour(3)//res9: Int = 12
-
+```
+- Variable length arguments
+There is a special syntax for methods that can take parameters of a repeated type. To apply String’s capitalize function to several strings, you might write:
+```scala
 def capitalizeAll(args:String*) = {//capitalizeAll: (args: String*)Seq[String]
   args.map {
     arg => arg.capitalize
   }
 }
 capitalizeAll("rarity","appledog")//res10: Seq[String] = ArraySeq(Rarity, Appledog)
-
+```
+- Classes
+```scala
 class Calculator {
   var brand: String = "HP"
   def add(m: Int, n: Int):Int = m + n
@@ -187,7 +202,12 @@ class Calculator {
 val calc = new Calculator//calc: Calculator = Calculator@781896fc
 calc.add(1,2)//res11: Int = 3
 calc.brand//res12: String = HP
+```
+Contained are examples defining methods with def and fields with val. Methods are just functions that can access the state of the class.
 
+- Constructor
+Constructors aren’t special methods, they are the code outside of method definitions in your class. Let’s extend our Calculator example to take a constructor argument and use it to initialize internal state.
+```scala
 class Calculator2(brant:String) {
   var color : String = if (brant == "TI") {
   "blue"
@@ -198,11 +218,18 @@ class Calculator2(brant:String) {
   } 
   def add(m:Int,n:Int) : Int = m + n
 }//defined class Calculator2
+```
+Note the two different styles of comments.
 
+You can use the constructor to construct an instance:
+```scala
 val calc2 = new Calculator2("TI")//calc2: Calculator2 = Calculator2@6d484872
 calc2.color//res13: String = blue
 calc2.add(1,2)//res14: Int = 3
-
+```
+- Abstract Classes
+You can define an abstract class, a class that defines some methods but does not implement them. Instead, subclasses that extend the abstract class define these methods. You can’t create an instance of an abstract class.
+```scala
 abstract class Shape {
   def getArea():Int
 }//defined class Shape
@@ -212,6 +239,10 @@ class Circle(r:Int) extends Shape {
 }//defined class Circle
 
 val s = new Circle(2)//s: Circle = Circle@7d74ce21
+```
+- Traits
+traits are collections of fields and behaviors that you can extend or mixin to your classes.
+```scala
 trait Car {
   val brand:String
 }//defined trait Car
@@ -222,16 +253,22 @@ trait Shiny {
 class BMW extends Car {
   val brand = "BMW"
 }defined class BMW
-
+```
+One class can extend several traits using the with keyword:
+```scala
 class BMW2 extends Car with Shiny {
   val brand = "BMW2"
   val shineRefraction = 12
-}defined class BMW2
+}//defined class BMW2
+```
+- Types
+Earlier, you saw that we defined a function that took an Int which is a type of Number. Functions can also be generic and work on any type. When that occurs, you’ll see a type parameter introduced with the square bracket syntax. Here’s an example of a Cache of generic Keys and Values.
 
+```scala
 trait Cache[K,V] {
   def get(key:K) : V
   def put(key:K,value:V)
   def delete(key:K)
 }defined trait Cache
-
+```
 
