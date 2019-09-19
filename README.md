@@ -106,5 +106,5 @@ We can use Scala console to run simple scala code by right click ->Run Scala Con
 #### Simple Demo on worksheet
 Expressions
 ```scala
-1 + 1
+1 + 1 //res0: Int = 2
 ```
