@@ -74,6 +74,7 @@ cd ${YOUR_WORK_DIR}/bigdata/scala
 mkdir -p src/main.scala/ca/jrvs
 scr/main/scala/ca/jrvs/App.scala
 ```
+- simple "Hello World!" application
 ```scala
 package ca.jrvs
 object App {
